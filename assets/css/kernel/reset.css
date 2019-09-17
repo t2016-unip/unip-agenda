@@ -1,0 +1,53 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+* {
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+html{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+:focus {
+    outline: 0;
+}
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+  padding: 0px;
+}
+input, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+  display: inline-block;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+}

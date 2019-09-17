@@ -1,0 +1,227 @@
+/* Fonts
+-------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap');
+
+/* Default
+-------------------------------------------------- */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #000;
+  background-color: #F9F9FC;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+p + p {
+  margin-top: 10px;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+/* Forms
+-------------------------------------------------- */
+
+.form-field {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 25px;
+  font-size: 16px;
+  background-color: transparent;
+  color: #000;
+  border: 2px #999 solid;
+}
+
+.form-field-off {
+  border-color: #fff;
+  color: #fff;
+}
+
+.form-field-off::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+textarea.form-field {
+  padding: 15px 25px;
+  height: 200px;
+}
+
+.form-label {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-left: 25px;
+}
+
+/* Button
+-------------------------------------------------- */
+
+.button {
+  height: 50px;
+  padding: 0 40px;
+  border-radius: 25px;
+  background-color: #327fff;
+  background: linear-gradient(45deg, #f55223, #ed0201);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.button-full {
+  width: 100%;
+}
+
+.button-border {
+  background-color: transparent;
+  color: #fff;
+  border: 2px #fff solid;
+}
+
+/* Image
+-------------------------------------------------- */
+
+.image-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-center {
+  margin: 0 auto;
+  display: block;
+}
+
+/* Table
+-------------------------------------------------- */
+
+.table {
+  width: 100%;
+}
+
+.table tr {
+  border-bottom: 1px #ddd solid;
+}
+
+.table td, .table th {
+  padding: 10px;
+}
+
+.table th {
+  font-weight: bold
+}
+
+/* Extras
+-------------------------------------------------- */
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #b2b7bb;
+}
+
+.card {
+  box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.bg-blue {
+  background-color: #202A6B;
+  background-image: url(../../img/bg-login.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.nav li {
+	display: inline-table;
+}
+
+.nav li a {
+  font-family: 'Proxima Nova';
+  font-weight: 700;
+  font-size: 17px;
+	height: 90px;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 20px;
+}
+
+.nav li a:hover {
+  background: linear-gradient(45deg, #f55223, #ed0201);
+  color: #fff;
+}
+
+.container-top {
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+}
+
+.container-title {
+  padding-bottom: 100px;
+  margin-bottom: -100px;
+}
+
+.container-login {
+  background-color: #202A6B;
+  background-image: url(../../img/bg-login.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  height: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.login-box {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.search-field {
+  padding-right: 60px;
+}
+
+.search-button {
+	background-color: transparent;
+	width: 60px;
+	height: 50px;
+  position: absolute;
+  font-size: 18px;
+  right: 20px;
+  color: #fff;
+}

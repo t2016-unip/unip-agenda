@@ -1,0 +1,19 @@
+{
+    "name": "app/unip-agenda",
+    "description": "Plataforma para reservas em gerais nas dependencias da UNIP",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tharlei",
+            "email": "tharlei_aleixo@hotmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
