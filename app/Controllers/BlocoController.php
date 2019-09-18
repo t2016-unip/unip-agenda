@@ -20,7 +20,7 @@ class BlocoController
 
     public function show($id)
     {
-        View::render('EditarBloco', ['blocos' => Bloco::buscar($id)]);
+        View::render('EditarBloco', ['bloco' => Bloco::buscar($id)]);
     }
 
     public function store($request)

@@ -25,7 +25,6 @@ class Bloco
 
     public static function atualizar($id, $request)
     {
-        $request['id_bloco'] = 1;
         foreach ($request as $key => $value) $sets[] = "{$key} = '{$value}'";
         $sql = "UPDATE bloco SET " . implode(', ', $sets) . " WHERE id_bloco = {$id}";
         return DB::query($sql);
