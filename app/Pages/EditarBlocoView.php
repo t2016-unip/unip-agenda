@@ -17,7 +17,7 @@
 			<div class="grid-7 padding-sm">
 				<div class="grid-12 padding-sm card">
 					<div class="grid-12 padding-sm">
-						<label class="form-label">Nº bloco:</label>
+						<label class="form-label">Nome bloco:</label>
 						<input class="form-field" type="text" name="nome_bloco" value="<?= $bloco['nome_bloco'] ?>">
 					</div>
 					<!-- <div class="grid-12 padding-sm">
