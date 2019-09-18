@@ -7,7 +7,7 @@
 
         public static function tudo() {
             $sql = "SELECT * FROM sala s JOIN bloco b on (b.id_bloco = s.id_bloco)";
-            return DB::select($sql);
+            return DB::query($sql);
         }
 
         public static function salvar($request) {
@@ -38,6 +38,6 @@
 
         public static function buscar($id) {
             $sql = "SELECT * FROM sala WHERE id_sala = {$id}"; 
-            return DB::select($sql)[0];
+            return DB::query($sql)[0];
         }
     }
