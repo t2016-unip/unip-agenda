@@ -7,7 +7,7 @@
     class SalaController {
 
         public function home() {
-            View::render('Sala', ['salas' => Sala::tudo()], true, true);
+            View::render('Sala', ['salas' => Sala::tudo()]);
         }
 
         public static function create() {
