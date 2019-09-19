@@ -32,7 +32,7 @@ class BlocoController
     public function update($id, $request)
     {
         Bloco::atualizar($id, $request);
-        redirecionar("/blocos/{$id}");
+        redirecionar("/blocos");
     }
 
     public function destroy($id)
