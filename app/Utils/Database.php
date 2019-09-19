@@ -1,24 +1,18 @@
 <?php
     namespace App\Utils;
 
+    use PDO;
+
     class Database {
 
-        public static function select($sql, $debug = false) {
-            $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_BASE, DB_PORT);
-            if($debug) dd($sql);
-            $dados = mysqli_query($conn, $sql);
-            $rows = [];
-            if ($dados->num_rows) {
-                while($row = mysqli_fetch_assoc($dados))
-                    $rows[] = $row;
-            }
-            return $rows;
-        }
-
         public static function query($sql, $debug = false) {
-            $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_BASE, DB_PORT);
+            $conn = new PDO(DB_TYPE . 
+                ':host=' . DB_HOST . ';
+                dbname=' . DB_BASE, DB_USER, DB_PASS);
+            // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             if($debug) dd($sql);
-            $dados = mysqli_query($conn, $sql);
-            return $dados;
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
     }

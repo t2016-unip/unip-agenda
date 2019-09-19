@@ -15,7 +15,7 @@
 
             $usuario = Usuario::autenticar($request['email'], $request['senha']);
             if ($usuario) { //EXISTE USUARIO
-                $_SESSION['usuario'] = $usuario[0];
+                $_SESSION['usuario'] = $usuario;
                 redirecionar('/salas');
             }
             else { //ERROU SENHA OU EMAIL

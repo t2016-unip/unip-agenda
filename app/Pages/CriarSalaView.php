@@ -17,14 +17,14 @@
 				<div class="grid-12 padding-sm card">
 					<div class="grid-12 padding-sm">
 						<label class="form-label">Nº sala:</label>
-						<input class="form-field" type="number" name="numero_sala">
+						<input class="form-field" type="number" name="numero_sala" required>
 					</div>
 					<!-- <div class="grid-12 padding-sm">
 						<label class="form-label">Descrição:</label>
 						<textarea class="form-field"></textarea>
 					</div> -->
 					<div class="grid-12 padding-sm">
-						<button class="button">Adicionar</button>
+						<button type="submit" class="button">Adicionar</button>
 					</div>
 				</div>
 			</div>

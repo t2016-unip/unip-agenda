@@ -17,6 +17,7 @@
         </div>
         <div class="js">
             <script src="<?= asset('js/jquery.min.js') ?>"></script>
+            <script src="<?= asset('js/global.js') ?>"></script>
             #JS_FILE#
         </div>
     </body>

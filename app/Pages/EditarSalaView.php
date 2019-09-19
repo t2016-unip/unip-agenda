@@ -18,12 +18,14 @@
 				<div class="grid-12 padding-sm card">
 					<div class="grid-12 padding-sm">
 						<label class="form-label">Nº sala:</label>
-						<input class="form-field" type="number" name="numero_sala" value="<?= $sala['numero_sala'] ?>">
+						<input class="form-field" type="number" name="numero_sala" 
+							value="<?= $sala['numero_sala'] ?>" required>
 					</div>
-					<!-- <div class="grid-12 padding-sm">
-						<label class="form-label">Descrição:</label>
-						<textarea class="form-field"></textarea>
-					</div> -->
+					<div class="grid-12 padding-sm">
+						<label class="form-label">Ativada:</label>
+						<input class="form-label" type="checkbox" value="1" name="flag_status" 
+							<?= $sala['flag_status'] ? 'checked' : '' ?>>
+					</div>
 					<div class="grid-12 padding-sm">
 						<button class="button">Atualizar</button>
 					</div>
