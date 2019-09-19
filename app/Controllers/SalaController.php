@@ -1,43 +1,35 @@
-<?php
+<?php   
+    namespace App\Controllers;
 
-namespace App\Controllers;
+    use App\Models\Sala;
+    use App\Pages\View;
 
-use App\Models\Sala;
-use App\Pages\View;
+    class SalaController {
 
-class SalaController
-{
+        public function home() {
+            View::render('Sala', ['salas' => Sala::tudo()], true, true);
+        }
 
-    public function home()
-    {
-        View::render('Sala', ['salas' => Sala::tudo()], true, true);
+        public static function create() {
+            View::render('CriarSala');
+        }
+
+        public function show($id) {
+            View::render('EditarSala', ['sala' => Sala::buscar($id)]);
+        }
+
+        public function store($request) {
+            Sala::salvar($request);
+            redirecionar('/salas'); 
+        }
+
+        public function update($id, $request) {
+            Sala::atualizar($id, $request);
+            redirecionar("/salas/{$id}"); 
+        }
+
+        public function destroy($id) {
+            Sala::excluir($id);
+            redirecionar('/salas'); 
+        }
     }
-
-    public static function create()
-    {
-        View::render('CriarSala');
-    }
-
-    public function show($id)
-    {
-        View::render('EditarSala', ['sala' => Sala::buscar($id)]);
-    }
-
-    public function store($request)
-    {
-        Sala::salvar($request);
-        redirecionar('/salas');
-    }
-
-    public function update($id, $request)
-    {
-        Sala::atualizar($id, $request);
-        redirecionar("/salas/{$id}");
-    }
-
-    public function destroy($id)
-    {
-        Sala::excluir($id);
-        redirecionar('/salas');
-    }
-}
