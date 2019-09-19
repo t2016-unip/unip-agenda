@@ -24,7 +24,7 @@
 					<div class="grid-12 padding-sm">
 						<label class="form-label">Ativada:</label>
 						<input class="form-label" type="checkbox" value="1" name="flag_status" 
-							<?= $sala['flag_status'] ? 'checked' : '' ?> required>
+							<?= $sala['flag_status'] ? 'checked' : '' ?>>
 					</div>
 					<div class="grid-12 padding-sm">
 						<button class="button">Atualizar</button>

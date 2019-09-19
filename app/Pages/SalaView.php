@@ -31,6 +31,7 @@
 							<tr>
 								<th>Sala</th>
 								<th>Bloco</th>
+								<th>Status</th>
 								<th></th>
 							</tr>
 						</thead>
@@ -39,6 +40,7 @@
 								<tr>
                                     <td><?= $sala['numero_sala'] ?></td>
 									<td><?= $sala['nome_bloco'] ?></td>
+									<td><?= $sala['flag_status'] ? 'Ativado' : 'Desativada' ?></td>
 									<td class="align-right" style="display: flex; justify-content: flex-end;">
 										<a href="<?= route("/salas/{$sala['id_sala']}") ?>">
 											<i class="fas fa-pencil-alt"></i> &#160;&#160; 
