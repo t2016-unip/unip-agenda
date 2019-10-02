@@ -7,7 +7,7 @@
 
         public static function tudo() {
             $sql = "SELECT * FROM curso";
-            return DB::select($sql);
+            return DB::query($sql);
         }
 
         public static function salvar($request) {
@@ -39,6 +39,6 @@
 
         public static function buscar($id) {
             $sql = "SELECT * FROM curso WHERE id_curso = {$id}";
-            return DB::select($sql)[0];
+            return DB::query($sql)[0];
         }
     }

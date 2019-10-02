@@ -10,7 +10,7 @@ class Bloco
     public static function tudo()
     {
         $sql = "SELECT * FROM bloco";
-        return DB::select($sql);
+        return DB::query($sql);
     }
 
     public static function salvar($request){
@@ -40,6 +40,6 @@ class Bloco
     public static function buscar($id)
     {
         $sql = "SELECT * FROM bloco WHERE id_bloco = {$id}";
-        return DB::select($sql)[0];
+        return DB::query($sql)[0];
     }
 }
