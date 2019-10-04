@@ -4,16 +4,16 @@
 	<div class="space"></div>
     <div class="container">
         <div class="grid-7">
-        	<h1>Salas</h1>
+        	<h1>Cursos</h1>
 		</div>      
 		<div class="grid-5 relative">
-			<input class="form-field form-field-off search-field" id="iptProcurar" placeholder="Buscar sala...">
+			<input class="form-field form-field-off search-field" id="Procurar" placeholder="Buscar Curso...">
 		</div>
         <div class="grid-12 padding-sm">
-            <a href="<?= route('/salas/criar') ?>">
+            <a href="<?= route('/cursos/criar') ?>">
 				<button class="button">
 					<i class="fas fa-plus"></i> 
-					Adicionar sala
+					Adicionar Curso
 				</button>
 			</a>
         </div>
@@ -29,23 +29,19 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th>Sala</th>
-								<th>Bloco</th>
-								<th>Status</th>
+								<th>Curso</th>
 								<th></th>
 							</tr>
 						</thead>
 						<tbody>
-                            <?php foreach ($salas as $key => $sala) { ?>
+                            <?php foreach ($cursos as $key => $curso) { ?>
 								<tr>
-                                    <td><?= $sala['numero_sala'] ?></td>
-									<td><?= $sala['nome_bloco'] ?></td>
-									<td><?= $sala['flag_status'] ? 'Ativado' : 'Desativada' ?></td>
+                                    <td><?= $curso['nome_curso'] ?></td>
 									<td class="align-right" style="display: flex; justify-content: flex-end;">
-										<a href="<?= route("/salas/{$sala['id_sala']}") ?>">
+										<a href="<?= route("/cursos/{$curso['id_curso']}") ?>">
 											<i class="fas fa-pencil-alt"></i> &#160;&#160; 
 										</a>
-										<form action="<?= route("/salas/{$sala['id_sala']}") ?>" method="post">
+										<form action="<?= route("/cursos/{$curso['id_curso']}") ?>" method="post">
 											<input type="hidden" name="_method" value="DELETE">
 											<button tpye="submit">
 												<i class="far fa-trash-alt"></i>

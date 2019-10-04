@@ -4,28 +4,26 @@
     <div class="space"></div>
 		<div class="container">
 			<div class="grid-12">
-				<h1>Editar Sala</h1>
+				<h1>Editar Curso</h1>
 			</div>
 		</div>
     <div class="space-sm"></div>
 </div>
 
 <div class="container">
-	<form action="<?= route("/salas/{$sala['id_sala']}") ?>" method="post">
+	<form action="<?= route("/cursos/{$curso['id_curso']}") ?>" method="post">
 		<input type="hidden" name="_method" value="PUT">
 		<div class="grid-12 padding-sm">
 			<div class="grid-7 padding-sm">
 				<div class="grid-12 padding-sm card">
 					<div class="grid-12 padding-sm">
-						<label class="form-label">Nº sala:</label>
-						<input class="form-field" type="number" name="numero_sala" 
-							value="<?= $sala['numero_sala'] ?>" required>
+						<label class="form-label">Nome do Curso:</label>
+						<input class="form-field" type="text" name="nome_curso" value="<?= $curso['nome_curso'] ?>">
 					</div>
-					<div class="grid-12 padding-sm">
-						<label class="form-label">Ativada:</label>
-						<input class="form-label" type="checkbox" value="1" name="flag_status" 
-							<?= $sala['flag_status'] ? 'checked' : '' ?>>
-					</div>
+					<!-- <div class="grid-12 padding-sm">
+						<label class="form-label">Descrição:</label>
+						<textarea class="form-field"></textarea>
+					</div> -->
 					<div class="grid-12 padding-sm">
 						<button class="button">Atualizar</button>
 					</div>
