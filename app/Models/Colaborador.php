@@ -3,40 +3,49 @@
 
     use App\Utils\Database as DB;
 
-    class Sala {
+    class Colaborador {
+
+      public static $niveis = ['user' => 'Usuário', 'admin' => 'Administrador'];
 
         public static function tudo() {
-            $sql = "SELECT * FROM sala s JOIN bloco b on (b.id_bloco = s.id_bloco)";
+            $sql = "SELECT * FROM colaborador";
             return DB::query($sql);
         }
 
         public static function salvar($request) {
-            if (empty($request['id_bloco'])) $request['id_bloco'] = 1;
+            $request['senha'] = md5($request['senha']);
             $request['flag_status'] = 1;
             foreach ($request as $key => $value) {
                 $values[] = "'{$value}'";
                 $keys[] = $key;
             }
-            $sql = "INSERT INTO sala (" . implode(', ', $keys) . ") VALUES 
+            $sql = "INSERT INTO colaborador (" . implode(', ', $keys) . ") VALUES 
                 (" . implode(', ', $values) . ");";  
             return DB::query($sql);
         }
 
         public static function atualizar($id, $request) {
+            if (empty($request['trocar_senha'])) unset($request['senha']);
+            else {
+                $request['senha'] = md5($request['senha']);
+                unset($request['trocar_senha']);
+            }
+
             if (empty($request['flag_status'])) $request['flag_status'] = 0;
+
             foreach ($request as $key => $value) $sets[] = "{$key} = '{$value}'";
-            $sql = "UPDATE sala SET " . implode(', ', $sets) . " WHERE id_sala = {$id}";  
+            $sql = "UPDATE colaborador SET " . implode(', ', $sets) . " WHERE id_colaborador = {$id}";  
             return DB::query($sql);
         }
         
 
         public static function excluir($id) {
-            $sql = "DELETE FROM sala WHERE id_sala = {$id}"; 
+            $sql = "DELETE FROM colaborador WHERE id_colaborador = {$id}"; 
             return DB::query($sql);
         }
 
         public static function buscar($id) {
-            $sql = "SELECT * FROM sala WHERE id_sala = {$id}"; 
+            $sql = "SELECT * FROM colaborador WHERE id_colaborador = {$id}"; 
             return DB::query($sql)[0];
         }
     }

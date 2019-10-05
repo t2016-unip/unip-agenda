@@ -16,7 +16,7 @@
             $usuario = Usuario::autenticar($request['email'], $request['senha']);
             if ($usuario) { //EXISTE USUARIO
                 $_SESSION['usuario'] = $usuario;
-                redirecionar('/salas');
+                redirecionar('/agendas');
             }
             else { //ERROU SENHA OU EMAIL
                 $this->index(['mensagem' => "E-mail ou senha incorreto!"]);

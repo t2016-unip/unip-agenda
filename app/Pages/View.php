@@ -1,12 +1,13 @@
 <?php
     namespace App\Pages;
 
+    use App\Utils\Autenticar;
+
     class View {
         
-        public static function render($viewName, array $data = [], $autenticar = true, $js = false, $css = false) {
-            if ($autenticar && empty($_SESSION['usuario']['id_colaborador'])) {
-                redirecionar('/');
-            }
+        public static function render($viewName, array $data = [], $autenticar = ['admin', '/'], $js = false, $css = false) {
+           
+            if ($autenticar) Autenticar::verificar($autenticar[0], $autenticar[1]);
 
             ob_start();
             require_once("TemplateView.php");

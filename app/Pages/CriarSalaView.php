@@ -15,14 +15,19 @@
 		<div class="grid-12 padding-sm">
 			<div class="grid-7 padding-sm">
 				<div class="grid-12 padding-sm card">
-					<div class="grid-12 padding-sm">
+					<div class="grid-6 padding-sm">
 						<label class="form-label">Nº sala:</label>
 						<input class="form-field" type="number" name="numero_sala" required>
 					</div>
-					<!-- <div class="grid-12 padding-sm">
-						<label class="form-label">Descrição:</label>
-						<textarea class="form-field"></textarea>
-					</div> -->
+					<div class="grid-6 padding-sm">
+						<label class="form-label">Bloco:</label>
+						<select name="id_bloco" id="id_bloco" class="form-field">
+							<option value="NULL">ESCOLHA</option>
+						<?php foreach ($blocos as $bloco) { ?>
+							<option value="<?= $bloco['id_bloco'] ?>"><?= $bloco['nome_bloco'] ?></option>
+						<?php } ?>
+						</select>
+					</div>
 					<div class="grid-12 padding-sm">
 						<button type="submit" class="button">Adicionar</button>
 					</div>

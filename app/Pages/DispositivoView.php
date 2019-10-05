@@ -1,21 +1,24 @@
 <?php require('Menu.php') ?>
 
 <div class="container-full container-title bg-blue">
-  <div class="space"></div>
-  <div class="container">
-    <div class="grid-7">
-      <h1>Dispositivos</h1>
+	<div class="space"></div>
+    <div class="container">
+        <div class="grid-7">
+        	<h1>Dispositivos</h1>
+		</div>      
+		<div class="grid-5 relative">
+			<input class="form-field form-field-off search-field" id="iptProcurar" placeholder="Buscar dispositivo...">
+		</div>
+        <div class="grid-12 padding-sm">
+            <a href="<?= route('/dispositivos/criar') ?>">
+				<button class="button">
+					<i class="fas fa-plus"></i> 
+					Adicionar dispositivo
+				</button>
+			</a>
+        </div>
     </div>
-    <div class="grid-12 padding-sm">
-      <a href="<?= route('/dispositivos/criar') ?>">
-        <button class="button">
-          <i class="fas fa-plus"></i>
-          Adicionar dispositivo
-        </button>
-      </a>
-    </div>
-  </div>
-  <div class="space-sm"></div>
+	<div class="space-sm"></div>
 </div>
 
 
@@ -28,7 +31,7 @@
             <thead>
               <tr>
                 <th>Dispositivo</th>
-                <th>Tipo</th>
+                <th>Categoria</th>
                 <th>Observação</th>
                 <th></th>
               </tr>
@@ -37,7 +40,7 @@
               <?php foreach ($dispositivos as $key => $dispositivo) { ?>
                 <tr>
                   <td><?= $dispositivo['nome_dispositivo'] ?></td>
-                  <td><?= $dispositivo['tipo'] ?></td>
+                  <td><?= $dispositivo['nome_categoria'] ?></td>
                   <td><?= $dispositivo['observacao'] ?></td>
                   <td class="align-right" style="display: flex; justify-content: flex-end;">
                     <a href="<?= route("/dispositivos/{$dispositivo['id_dispositivo']}") ?>">

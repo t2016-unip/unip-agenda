@@ -7,7 +7,7 @@
     class CursoController {
 
         public function home() {
-            View::render('Curso', ['cursos' => Curso::tudo()], true, true);
+            View::render('Curso', ['cursos' => Curso::tudo()]);
         }
 
         public static function create() {

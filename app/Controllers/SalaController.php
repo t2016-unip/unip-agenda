@@ -2,6 +2,7 @@
     namespace App\Controllers;
 
     use App\Models\Sala;
+    use App\Models\Bloco;
     use App\Pages\View;
 
     class SalaController {
@@ -11,7 +12,7 @@
         }
 
         public static function create() {
-            View::render('CriarSala');
+            View::render('CriarSala', ['blocos' => Bloco::tudo()]);
         }
 
         public function show($id) {

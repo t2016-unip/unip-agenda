@@ -7,7 +7,7 @@
         	<h1>Cursos</h1>
 		</div>      
 		<div class="grid-5 relative">
-			<input class="form-field form-field-off search-field" id="Procurar" placeholder="Buscar Curso...">
+			<input class="form-field form-field-off search-field" id="Procurar" placeholder="Buscar curso...">
 		</div>
         <div class="grid-12 padding-sm">
             <a href="<?= route('/cursos/criar') ?>">

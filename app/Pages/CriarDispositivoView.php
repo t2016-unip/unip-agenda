@@ -20,8 +20,13 @@
             <input class="form-field" type="text" name="nome_dispositivo" required>
           </div>
           <div class="grid-12 padding-sm">
-            <label class="form-label">Tipo:</label>
-            <input class="form-field" type="text" name="tipo" required>
+            <label class="form-label">Categoria:</label>
+            <select name="id_categoria" id="id_categoria" class="form-field">
+							<option value="NULL">ESCOLHA</option>
+						<?php foreach ($categorias as $categoria) { ?>
+							<option value="<?= $categoria['id_categoria'] ?>"><?= $categoria['nome_categoria'] ?></option>
+						<?php } ?>
+						</select>
           </div>
           <div class="grid-12 padding-sm">
             <label class="form-label">Observação:</label>

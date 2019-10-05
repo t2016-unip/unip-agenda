@@ -10,7 +10,7 @@ class BlocoController
 
     public function home()
     {
-        View::render('Bloco', ['blocos' => Bloco::tudo()], true, true);
+        View::render('Bloco', ['blocos' => Bloco::tudo()]);
     }
 
     public static function create()

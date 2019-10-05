@@ -8,23 +8,28 @@
         <div class="grid-10 no-padding align-center">
             <ul class="nav">
                 <li>
-                    <a href="<?= route('/salas') ?>">Salas</a>
+                    <a href="<?= route('/agendas') ?>">Agendar</a>
                 </li>
-                <li>
-                    <a href="<?= route('/blocos') ?>">Blocos</a>
-                </li>
-                <li>
-                    <a href="<?= route('/colaboradores') ?>">Colaboradores</a>
-                </li>
-                <li>
-                    <a href="<?= route('/categorias') ?>">Categorias</a>
-                </li>
-                <li>
-                    <a href="<?= route('/dispositivos') ?>">Dispositivos</a>
-                </li>
-                <li>
-                    <a href="<?= route('/cursos') ?>">Cursos</a>
-                </li>
+                <?php if ($_SESSION['usuario']['nivel'] == 'admin') { ?>
+                    <li>
+                        <a href="<?= route('/salas') ?>">Salas</a>
+                    </li>
+                    <li>
+                        <a href="<?= route('/blocos') ?>">Blocos</a>
+                    </li>
+                    <li>
+                        <a href="<?= route('/colaboradores') ?>">Colaboradores</a>
+                    </li>
+                    <li>
+                        <a href="<?= route('/categorias') ?>">Categorias</a>
+                    </li>
+                    <li>
+                        <a href="<?= route('/dispositivos') ?>">Dispositivos</a>
+                    </li>
+                    <li>
+                        <a href="<?= route('/cursos') ?>">Cursos</a>
+                    </li>
+                <?php } ?>                
                 <li>
                     <a href="<?= route('/') ?>">
                         <i class="fas fa-sign-out-alt"></i> 

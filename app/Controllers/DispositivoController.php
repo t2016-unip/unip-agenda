@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Dispositivo;
+use App\Models\Categoria;
 use App\Pages\View;
 
 class DispositivoController
@@ -15,7 +16,7 @@ class DispositivoController
 
   public static function create()
   {
-    View::render('CriarDispositivo');
+    View::render('CriarDispositivo', ['categorias' => Categoria::all()]);
   }
 
   public function store($request)
@@ -26,7 +27,7 @@ class DispositivoController
 
   public function show($id)
   {
-    View::render('EditarDispositivo', ['dispositivo' => Dispositivo::detail($id)]);
+    View::render('EditarDispositivo', ['dispositivo' => Dispositivo::detail($id), 'categorias' => Categoria::all()]);
   }
 
   public function update($id, $request)
