@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>Universidade Paulista</title>
-        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="<?= asset('img/favicon.png') ?>" />
         <link rel="stylesheet" href="<?= asset('css/kernel/reset.css') ?>" />

@@ -10,6 +10,11 @@
             return DB::query($sql);
         }
 
+        public static function disponiveis() {
+            $sql = "SELECT * FROM sala where flag_status = 1";
+            return DB::query($sql);
+        }
+
         public static function salvar($request) {
             if (empty($request['id_bloco'])) $request['id_bloco'] = 1;
             $request['flag_status'] = 1;

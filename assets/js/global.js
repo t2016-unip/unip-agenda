@@ -1,3 +1,7 @@
+function route(caminho = '/') {
+    return window.location.origin + caminho;
+}
+
 $('#iptProcurar').keyup(function(){
     var val = $(this).val().toLowerCase();
 
@@ -9,7 +13,6 @@ $('#iptProcurar').keyup(function(){
     
     if(text.indexOf(val) != -1)
     {
-    
         $(this).show();
     }
     });

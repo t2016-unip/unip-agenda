@@ -29,7 +29,7 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th>Sala</th>
+								<th>Nome</th>
 								<th>Bloco</th>
 								<th>Status</th>
 								<th></th>
@@ -38,7 +38,7 @@
 						<tbody>
                             <?php foreach ($salas as $key => $sala) { ?>
 								<tr>
-                                    <td><?= $sala['numero_sala'] ?></td>
+                                    <td><?= $sala['nome_sala'] ?></td>
 									<td><?= $sala['nome_bloco'] ?></td>
 									<td><?= $sala['flag_status'] ? 'Ativado' : 'Desativada' ?></td>
 									<td class="align-right" style="display: flex; justify-content: flex-end;">

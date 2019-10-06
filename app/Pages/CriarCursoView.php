@@ -15,14 +15,14 @@
 		<div class="grid-12 padding-sm">
 			<div class="grid-7 padding-sm">
 				<div class="grid-12 padding-sm card">
-					<div class="grid-12 padding-sm">
+					<div class="grid-8 padding-sm">
 						<label class="form-label">Nome:</label>
 						<input class="form-field" type="text" name="nome_curso">
 					</div>
-					<!-- <div class="grid-12 padding-sm">
-						<label class="form-label">Descrição:</label>
-						<textarea class="form-field"></textarea>
-					</div> -->
+					<div class="grid-4 padding-sm">
+						<label class="form-label">Semestres:</label>
+						<input class="form-field" type="text" name="qtd_semestre" value="10">
+					</div>
 					<div class="grid-12 padding-sm">
 						<button class="button">Adicionar</button>
 					</div>

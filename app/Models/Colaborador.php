@@ -12,6 +12,11 @@
             return DB::query($sql);
         }
 
+        public static function disponiveis() {
+            $sql = "SELECT * FROM colaborador WHERE flag_status = 1";
+            return DB::query($sql);
+        }
+
         public static function salvar($request) {
             $request['senha'] = md5($request['senha']);
             $request['flag_status'] = 1;

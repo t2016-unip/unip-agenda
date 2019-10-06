@@ -18,8 +18,8 @@
 				<div class="grid-12 padding-sm card">
 					<div class="grid-12 padding-sm">
 						<label class="form-label">Nº sala:</label>
-						<input class="form-field" type="number" name="numero_sala" 
-							value="<?= $sala['numero_sala'] ?>" required>
+						<input class="form-field" type="text" name="nome_sala" 
+							value="<?= $sala['nome_sala'] ?>" required>
 					</div>
 					<div class="grid-12 padding-sm">
 						<label class="form-label">Ativada:</label>

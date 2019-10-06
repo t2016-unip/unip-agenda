@@ -16,8 +16,8 @@
 			<div class="grid-7 padding-sm">
 				<div class="grid-12 padding-sm card">
 					<div class="grid-6 padding-sm">
-						<label class="form-label">Nº sala:</label>
-						<input class="form-field" type="number" name="numero_sala" required>
+						<label class="form-label">Sala:</label>
+						<input class="form-field" type="text" name="nome_sala" required>
 					</div>
 					<div class="grid-6 padding-sm">
 						<label class="form-label">Bloco:</label>

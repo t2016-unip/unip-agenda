@@ -30,13 +30,15 @@
 						<thead>
 							<tr>
 								<th>Curso</th>
+								<th>Semestres</th>
 								<th></th>
 							</tr>
 						</thead>
 						<tbody>
                             <?php foreach ($cursos as $key => $curso) { ?>
 								<tr>
-                                    <td><?= $curso['nome_curso'] ?></td>
+									<td><?= $curso['nome_curso'] ?></td>
+                                    <td><?= $curso['qtd_semestre'] ?></td>
 									<td class="align-right" style="display: flex; justify-content: flex-end;">
 										<a href="<?= route("/cursos/{$curso['id_curso']}") ?>">
 											<i class="fas fa-pencil-alt"></i> &#160;&#160; 

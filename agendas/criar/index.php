@@ -1,6 +1,6 @@
 <?php
     require("{$_SERVER['DOCUMENT_ROOT']}/kernel.php");
 
-    use App\Controllers\BlocoController;
+    use App\Controllers\AgendaController;
     
-    BlocoController::create();
+    AgendaController::create();

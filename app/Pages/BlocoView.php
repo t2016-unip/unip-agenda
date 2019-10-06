@@ -30,6 +30,7 @@
 						<thead>
 							<tr>
 								<th>Bloco</th>
+								<th>Descrição</th>
 								<th></th>
 							</tr>
 						</thead>
@@ -37,6 +38,7 @@
 							<?php foreach ($blocos as $key => $bloco) { ?>
 								<tr>
 									<td><?= $bloco['nome_bloco'] ?></td>
+									<td><?= $bloco['descricao'] ?></td>
 									<td class="align-right" style="display: flex; justify-content: flex-end;">
 										<a href="<?= route("/blocos/{$bloco['id_bloco']}") ?>">
 											<i class="fas fa-pencil-alt"></i> &#160;&#160;

@@ -30,3 +30,13 @@
     function redirecionar($path) {
         header("Location: {$path}");
     }
+
+    function alterarData($date = '', $operation = '-', $amount = 15, $type = 'days', $format = 'Y-m-d H:i:s') {
+        if (!$date) $date = date('Y-m-d H:i:s');
+        return date($format, strtotime("{$date} {$operation} {$amount} {$type}"));
+    }
+
+    function response($array, $code = 200) {
+        http_response_code($code);
+        echo json_encode(['data' => $array, 'status' => ($code == 200)]);
+    }
