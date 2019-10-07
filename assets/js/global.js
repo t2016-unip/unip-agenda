@@ -1,5 +1,11 @@
-function route(caminho = '/') {
-    return window.location.origin + caminho;
+function route(path = '/') {
+    let parts = explode('/',$path);
+    path = '';
+    parts.forEach((url, key) => {
+        if ((parts.length - 1) == key && url > 0) path += `index.php/${url}`;
+        else path += `${url}/`;
+    });
+    window.location.origin + path;
 }
 
 $('#iptProcurar').keyup(function(){
