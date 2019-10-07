@@ -13,7 +13,7 @@
         }
 
         public static function disponiveis() {
-            $sql = "SELECT * FROM colaborador WHERE flag_status = 1";
+            $sql = "SELECT * FROM colaborador WHERE flag_status = '1'";
             return DB::query($sql);
         }
 
