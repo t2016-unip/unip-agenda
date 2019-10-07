@@ -24,6 +24,14 @@
     }
 
     function route($path) {
+        if (APP_PROD) {
+            $parts = explode('/',$path);
+            $path = '';
+            foreach ($parts as $key => $url) {
+                if ((count($parts) - 1) == $key && $url > 0) $path .= "index.php/{$url}";
+                else $path .= "{$url}/";
+            }
+        }
         return HTTP_TYPE . "{$_SERVER['HTTP_HOST']}{$path}";
     }
 
