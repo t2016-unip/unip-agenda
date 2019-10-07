@@ -5,7 +5,7 @@ function route(path = '/') {
         if ((parts.length - 1) == key && url > 0) path += `index.php/${url}`;
         else path += `${url}/`;
     });
-    window.location.origin + path;
+    return window.location.origin + path;
 }
 
 $('#iptProcurar').keyup(function(){
