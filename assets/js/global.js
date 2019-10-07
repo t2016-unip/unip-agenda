@@ -1,5 +1,5 @@
 function route(path = '/') {
-    let parts = explode('/',$path);
+    let parts = path.split('/');
     path = '';
     parts.forEach((url, key) => {
         if ((parts.length - 1) == key && url > 0) path += `index.php/${url}`;
