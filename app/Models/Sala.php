@@ -11,7 +11,7 @@
         }
 
         public static function disponiveis() {
-            $sql = "SELECT * FROM sala where flag_status = 1";
+            $sql = "SELECT * FROM sala where flag_status = '1'";
             return DB::query($sql);
         }
 
