@@ -22,7 +22,7 @@
                     WHERE id_agenda in (" . implode(', ', $ids) . ")";
 
                 foreach (DB::query($sql) as $agenda) {
-                    $dispositivos[$agenda['id_agenda']] = $agenda;
+                    $dispositivos[$agenda['id_agenda']] = $agenda['nome_dispositivo'];
                 }
 
                 foreach ($agendas as $key => $agenda) {
