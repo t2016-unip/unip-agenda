@@ -36,6 +36,14 @@
     }
 
     function redirecionar($path) {
+        if (APP_PROD) {
+            $parts = explode('/',$path);
+            $path = '';
+            foreach ($parts as $key => $url) {
+                if ((count($parts) - 1) == $key && $url > 0) $path .= "index.php/{$url}";
+                else $path .= "{$url}/";
+            }
+        }
         header("Location: {$path}");
     }
 
