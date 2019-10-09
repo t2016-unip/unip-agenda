@@ -46,7 +46,7 @@
 							?>
 							<tr title="<?= $agenda['nome_curso'] . (empty($agenda['semestre']) ? '' : " {$agenda['semestre']} sem.") ?>">
 								<td><?= $agenda['nome_colaborador'] ?></td>
-								<td><?= implode(', ', $agenda['dispositivos']) ?></td>
+								<td><?= empty($agenda['dispositivos']) ? 'Nenhum' : $agenda['dispositivos'] ?></td>
 								<td><?= $agenda['nome_sala'] ?></td>
 								<td><?= date("d/m/Y", strtotime($agenda['data'])) . " {$agenda['horario_inicial']} até {$agenda['horario_final']}" ?></td>
 								<td class="align-right" style="display: flex; justify-content: flex-end;">

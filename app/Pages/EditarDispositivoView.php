@@ -21,16 +21,17 @@
             <input class="form-field" type="text" name="nome_dispositivo" value="<?= $dispositivo['nome_dispositivo'] ?>" required>
           </div>
           <div class="grid-12 padding-sm">
-            <label class="form-label">Tipo:</label>
-            <input class="form-field" type="text" name="tipo" value="<?= $dispositivo['tipo'] ?>" required>
+            <label class="form-label">Categoria:</label>
+            <select name="id_categoria" id="id_categoria" class="form-field">
+							<option value="NULL">ESCOLHA</option>
+						<?php foreach ($categorias as $categoria) { ?>
+							<option value="<?= $categoria['id_categoria'] ?>" <?= $categoria['id_categoria'] == $dispositivo['id_categoria'] ? 'selected' : '' ?>><?= $categoria['nome_categoria'] ?></option>
+						<?php } ?>
+						</select>
           </div>
           <div class="grid-12 padding-sm">
             <label class="form-label">Observação:</label>
             <input class="form-field" type="text" name="observacao" value="<?= $dispositivo['observacao'] ?>" required>
-          </div>
-          <div class="grid-12 padding-sm">
-            <label class="form-label">Ativada:</label>
-            <input class="form-label" type="checkbox" value="1" name="flag_status" <?= $dispositivo['flag_status'] ? 'checked' : '' ?>>
           </div>
           <div class="grid-12 padding-sm">
             <button class="button">Atualizar</button>

@@ -37,7 +37,7 @@ class AgendaController
             $array = ['id_dispositivo' => $id, 'id_agenda' => $agenda['id_agenda']];
             AgendaDispositivo::salvar($array);
         }
-        redirecionar('/agendas');
+        redirecionar('/agendas/criar');
     }
 
     public function destroy($id)

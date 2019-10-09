@@ -50,7 +50,11 @@
 					</div>
 					<div class="grid-4 padding-sm">
 						<label class="form-label">Semestre:</label>
-						<input class="form-field" type="text" name="semestre">
+						<select name="semestre" id="semestre" class="form-field">
+							<?php for ($i=1; $i <= 10; $i++) { ?>
+								<option value="<?= $i ?>"><?= $i ?></option>
+							<?php } ?>
+						</select>
 					</div>
 					<div class="grid-6 padding-sm">
 						<label class="form-label">Horario<b>*</b>:</label>
