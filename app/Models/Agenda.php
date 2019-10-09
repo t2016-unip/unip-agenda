@@ -11,7 +11,7 @@
                 JOIN colaborador c on (c.id_colaborador = a.id_colaborador)
                 JOIN curso co on (co.id_curso = a.id_curso)
                 JOIN sala s on (s.id_sala = a.id_sala)
-                ORDER BY data DESC, id_horario DESC";
+                ORDER BY data DESC, h.id_horario DESC";
             $agendas = DB::query($sql);
 
             foreach ($agendas as $agenda) $ids[] = $agenda['id_agenda'];
