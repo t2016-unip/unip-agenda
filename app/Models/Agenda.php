@@ -17,12 +17,12 @@
             foreach ($agendas as $agenda) $ids[] = $agenda['id_agenda'];
 
             if (!empty($ids)) {
-                $sql = "SELECT * FROM agenda_dispositivo ad
+                $sql = "SELECT d.nome_dispositivo FROM agenda_dispositivo ad
                     JOIN dispositivo d on (d.id_dispositivo = ad.id_dispositivo)
                     WHERE id_agenda in (" . implode(', ', $ids) . ")";
 
                 foreach (DB::query($sql) as $agenda) {
-                    $dispositivos[$agenda['id_agenda']] = $agenda['nome_dispositivo'];
+                    $dispositivos[$agenda['id_agenda']] = $agenda;
                 }
 
                 foreach ($agendas as $key => $agenda) {
