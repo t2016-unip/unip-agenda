@@ -17,7 +17,7 @@
             foreach ($agendas as $agenda) $ids[] = $agenda['id_agenda'];
 
             if (!empty($ids)) {
-                $sql = "SELECT d.nome_dispositivo FROM agenda_dispositivo ad
+                $sql = "SELECT nome_dispositivo FROM agenda_dispositivo ad
                     JOIN dispositivo d on (d.id_dispositivo = ad.id_dispositivo)
                     WHERE id_agenda in (" . implode(', ', $ids) . ")";
 
