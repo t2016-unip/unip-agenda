@@ -51,6 +51,8 @@
         }
 
         public static function excluir($id) {
+            $sql = "DELETE FROM agenda_dispositivo WHERE id_agenda = {$id}"; 
+            DB::query($sql);
             $sql = "DELETE FROM agenda WHERE id_agenda = {$id}"; 
             return DB::query($sql);
         }
