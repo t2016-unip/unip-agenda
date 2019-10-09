@@ -19,7 +19,7 @@
             if (!empty($ids)) {
                 $sql = "SELECT * FROM agenda_dispositivo ad
                     JOIN dispositivo d on (d.id_dispositivo = ad.id_dispositivo)
-                    WHERE id_agenda (" . implode(', ', $ids) . ")";
+                    WHERE id_agenda in (" . implode(', ', $ids) . ")";
 
                 foreach (DB::query($sql) as $agenda) {
                     $dispositivos[$agenda['id_agenda']] = $agenda;
