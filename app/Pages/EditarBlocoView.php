@@ -20,10 +20,10 @@
 						<label class="form-label">Nome bloco:</label>
 						<input class="form-field" type="text" name="nome_bloco" value="<?= $bloco['nome_bloco'] ?>">
 					</div>
-					<!-- <div class="grid-12 padding-sm">
+					<div class="grid-12 padding-sm">
 						<label class="form-label">Descrição:</label>
-						<textarea class="form-field"></textarea>
-					</div> -->
+						<input class="form-field" type="text" name="descricao" value="<?= $bloco['descricao'] ?>">
+					</div>
 					<div class="grid-12 padding-sm">
 						<button class="button">Atualizar</button>
 					</div>

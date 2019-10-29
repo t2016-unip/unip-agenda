@@ -1,9 +1,9 @@
 <?php
-    define('APP_PROD', true);
-    define('DB_TYPE', 'pgsql');
-    define('DB_USER', 'hrsnaezdwtinld');
-    define('DB_PASS', 'c74ebc2b9ed83f2cdcd002139f7040b9b288644a21218658369316f58c4c1aea');
-    define('DB_HOST', 'ec2-107-20-167-241.compute-1.amazonaws.com');
-    define('DB_BASE', 'd5ncbccfdhncte');
-    define('DB_PORT', 5432);
+    define('APP_PROD', false);
+    define('DB_TYPE', 'mysql');
+    define('DB_USER', 'unip');
+    define('DB_PASS', 'unip2017cdc');
+    define('DB_HOST', '127.0.0.1');
+    define('DB_BASE', 'unip');
+    define('DB_PORT', 3306);
     define('HTTP_TYPE', "http://");

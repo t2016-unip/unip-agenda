@@ -35,7 +35,7 @@
 							<tr>
 								<th>Colaborador</th>
 								<th>Dispositivos</th>
-								<th>Sala</th>
+								<th>Sala / Bloco</th>
 								<th>Data</th>
 								<th></th>
 							</tr>
@@ -47,7 +47,7 @@
 							<tr title="<?= $agenda['nome_curso'] . (empty($agenda['semestre']) ? '' : " {$agenda['semestre']} sem.") ?>">
 								<td><?= $agenda['nome_colaborador'] ?></td>
 								<td><?= empty($agenda['dispositivos']) ? 'Nenhum' : $agenda['dispositivos'] ?></td>
-								<td><?= $agenda['nome_sala'] ?></td>
+								<td><?= $agenda['nome_sala'] ?> / <?= $agenda['nome_bloco'] ?></td>
 								<td><?= date("d/m/Y", strtotime($agenda['data'])) . " {$agenda['horario_inicial']} até {$agenda['horario_final']}" ?></td>
 								<td class="align-right" style="display: flex; justify-content: flex-end;">
 									<!-- <a href="<?= route("/agendas/{$agenda['id_agenda']}") ?>">

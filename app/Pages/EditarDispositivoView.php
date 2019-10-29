@@ -31,7 +31,7 @@
           </div>
           <div class="grid-12 padding-sm">
             <label class="form-label">Observação:</label>
-            <input class="form-field" type="text" name="observacao" value="<?= $dispositivo['observacao'] ?>" required>
+            <input class="form-field" type="text" name="observacao" value="<?= $dispositivo['observacao'] ?>">
           </div>
           <div class="grid-12 padding-sm">
             <button class="button">Atualizar</button>

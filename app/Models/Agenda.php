@@ -6,11 +6,15 @@
     class Agenda {
 
         public static function tudo() {
+            $dI = alterarData('', '-', '7', 'days', 'Y-m-d');
+            $dF = alterarData('', '+', '7', 'days', 'Y-m-d');
             $sql = "SELECT * FROM agenda a 
                 JOIN horario h on (h.id_horario = a.id_horario)
                 JOIN colaborador c on (c.id_colaborador = a.id_colaborador)
                 JOIN curso co on (co.id_curso = a.id_curso)
                 JOIN sala s on (s.id_sala = a.id_sala)
+                JOIN bloco b on (b.id_bloco = s.id_bloco)
+                WHERE data BETWEEN '{$dI}' AND '{$dF}' 
                 ORDER BY data DESC, h.id_horario DESC";
             $agendas = DB::query($sql);
 

@@ -17,7 +17,7 @@ CREATE TABLE colaborador (
 	nome_colaborador TEXT,
 	email TEXT,
 	senha TEXT,
-	nivel ENUM('admin', 'user') DEFAULT 'user',
+	nivel ENUM('admin', 'collaborator', 'user') DEFAULT 'user',
 	flag_status BOOLEAN
 );
 
@@ -77,8 +77,6 @@ INSERT INTO bloco (nome_bloco, descricao) VALUES
 	('A', 'Ciencias Exatas e da Terra'), 
 	('B', ' Ciencias da Saude'), 
 	('C', 'Ciencias Sociais Aplicadas'), 
-	('D', 'Ciencias Humanas'), 
-	('E', 'Engenharia/Tecnologia'), 
-	('F', 'Ciencias Agrarias');
+	('D', 'Ciencias Humanas');
 INSERT INTO horario (horario_inicial, horario_final) VALUES ('19:10:00', '20:25:00');
 INSERT INTO horario (horario_inicial, horario_final) VALUES ('20:45:00', '22:00:00');

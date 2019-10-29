@@ -19,10 +19,10 @@
 						<label class="form-label">Nº bloco:</label>
 						<input class="form-field" type="text" name="nome_bloco">
 					</div>
-					<!-- <div class="grid-12 padding-sm">
+					<div class="grid-12 padding-sm">
 						<label class="form-label">Descrição:</label>
-						<textarea class="form-field"></textarea>
-					</div> -->
+						<input class="form-field" type="text" name="descricao">
+					</div>
 					<div class="grid-12 padding-sm">
 						<button class="button">Adicionar</button>
 					</div>

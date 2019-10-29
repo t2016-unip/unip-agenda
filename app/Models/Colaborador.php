@@ -5,7 +5,11 @@
 
     class Colaborador {
 
-      public static $niveis = ['user' => 'Usuário', 'admin' => 'Administrador'];
+      public static $niveis = [
+          'user' => 'Usuário', 
+          'collaborator' => 'Colaborador',
+          'admin' => 'Administrador'
+        ];
 
         public static function tudo() {
             $sql = "SELECT * FROM colaborador";
