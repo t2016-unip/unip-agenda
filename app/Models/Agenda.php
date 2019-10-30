@@ -67,7 +67,7 @@
         }
 
         public static function diasAgendado($request) {
-            $dI = date('Y-m-d');
+            $dI = dateBr('Y-m-d');
             $dF = alterarData('', '+', '7', 'days', 'Y-m-d');
             $sql = "SELECT * FROM agenda 
                 WHERE data BETWEEN '{$dI}' AND '{$dF}'

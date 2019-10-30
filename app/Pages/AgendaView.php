@@ -9,6 +9,9 @@
 	<div class="container">
 		<div class="grid-7">
 			<h1>Agendas</h1>
+			<h5>
+				Periodo: <?= alterarData('', '-', 7, 'days', 'd/m/Y') ?> até <?= alterarData('', '+', 7, 'days', 'd/m/Y') ?>
+			</h5>
 		</div>
 		<div class="grid-5 relative">
 			<input class="form-field form-field-off search-field" id="iptProcurar" placeholder="Buscar agenda...">

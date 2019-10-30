@@ -30,7 +30,7 @@
           </div>
           <div class="grid-12 padding-sm">
             <label class="form-label">Observação:</label>
-            <input class="form-field" type="text" name="observacao" required>
+            <input class="form-field" type="text" name="observacao">
           </div>
           <div class="grid-12 padding-sm">
             <button type="submit" class="button">Adicionar</button>
