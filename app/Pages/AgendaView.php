@@ -23,6 +23,10 @@
 					Realizar agendamento
 				</button>
 			</a>
+			<button class="button" onclick="generate()">
+				<i class="fas fa-file-download"></i>
+				Exportar
+			</button>	
 		</div>
 	</div>
 	<div class="space-sm"></div>
@@ -33,7 +37,7 @@
 		<div class="grid-12 padding-sm">
 			<div class="grid-12 padding-sm card">
 				<div class="grid-12 padding-sm">
-					<table class="table">
+					<table class="table" id="pdf2htmldiv">
 						<thead>
 							<tr>
 								<th>Colaborador</th>

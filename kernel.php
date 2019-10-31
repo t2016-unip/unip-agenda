@@ -56,6 +56,12 @@
         return gmdate($format, strtotime("-3hours"));
     }
 
+    function ultimoDiaMes($mes = '', $ano = '') {
+        if (!$mes) $mes = date('m');
+        if (!$ano) $ano = date('Y');
+        return date("t", mktime(0,0,0,$mes,'01',$ano));
+    }
+
     function alterarData($date = '', $operation = '-', $amount = 15, $type = 'days', $format = 'Y-m-d H:i:s') {
         if (!$date) $date = dateBr();
         return date($format, strtotime("{$date} {$operation} {$amount} {$type}"));
