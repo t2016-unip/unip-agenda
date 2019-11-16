@@ -41,7 +41,7 @@
                 <tr>
                   <td><?= $colaborador['id_colaborador'] ?></td>
                   <td><?= $colaborador['nome_colaborador'] ?></td>
-                  <td><?= $colaborador['nivel'] == 'admin' ? 'Administrador' : 'Colaborador' ?></td>
+                  <td><?= $colaborador['nivel'] == 'admin' ? 'Administrador' : ($colaborador['nivel'] == 'user' ? 'Usuario' : 'Colaborador') ?></td>
 									<td><?= $colaborador['flag_status'] ? 'Ativado' : 'Desativada' ?></td>
                   <td class="align-right" style="display: flex; justify-content: flex-end;">
                     <a href="<?= route("/colaboradores/{$colaborador['id_colaborador']}") ?>">
