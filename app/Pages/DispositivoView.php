@@ -27,7 +27,7 @@
     <div class="grid-12 padding-sm">
       <div class="grid-12 padding-sm card">
         <div class="grid-12 padding-sm">
-          <table class="table">
+          <table class="table-u">
             <thead>
               <tr>
                 <th>Dispositivo</th>

@@ -28,16 +28,6 @@ class AgendaController
         ], [false, '/'], true);
     }
 
-    public function datas()
-    {
-        View::render('AgendaData', [false, '/']);
-    }
-
-    public function report($request)
-    {
-        View::render('AgendaRelatorio', ['agendas' => Agenda::relatorio()], [false, '/']);
-    }
-
     public function store($request)
     {
         $dispositivos = json_decode($request['dispositivos']);
