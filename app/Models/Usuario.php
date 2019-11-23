@@ -10,6 +10,6 @@
             $sql = "SELECT * FROM colaborador 
                 WHERE email = '{$email}' 
                 AND senha = '{$senha}'";
-           return DB::query($sql)[0];
+           return @DB::query($sql)[0];
         }
     }

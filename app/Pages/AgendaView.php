@@ -23,19 +23,11 @@
 					Realizar agendamento
 				</button>
 			</a>
-			<button class="button" id="myBtn">
+			<a href="<?= route('/agendas/relatorio') ?>">
+				<button class="button">
 					Exportar
-			</button>
-			<div id="myModal" class="modal">
-				<div class="modal-content">
-					<span class="close">&times;</span>
-					<p>Selecione a data desejada</p>
-					<input type="date" name="bday" id="dat">
-					<button class="button" id="myBtn" onclick="generate()">
-						<i class="fas fa-file-download"></i>
-					</button>
-				</div>
-			</div>	
+				</button>
+			</a>	
 		</div>
 	</div>
 	<div class="space-sm"></div>
@@ -46,7 +38,7 @@
 		<div class="grid-12 padding-sm">
 			<div class="grid-12 padding-sm card" >
 				<div class="grid-12 padding-sm" >
-					<table class="table-u" id="pdf2htmldiv">
+					<table class="table-u">
 						<thead>
 							<tr>
 								<th>Colaborador</th>
@@ -85,7 +77,3 @@
 		</div>
 	</div>
 </div>
-
-<script>
-	var data = <?= json_encode($agendas) ?>
-</script>

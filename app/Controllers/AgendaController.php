@@ -83,7 +83,6 @@ class AgendaController
 
         $dispositivos = [];
         foreach (Dispositivo::all() as $dispositivo) {
-            $dias = [];
             if (!in_array($dispositivo['id_dispositivo'], $naoDisponiveis))
                 $dispositivos[] = [
                     'value' => $dispositivo['id_dispositivo'],
@@ -91,5 +90,25 @@ class AgendaController
                 ];
         }
         return response($dispositivos); 
+    }
+
+    public function filter() {
+        View::render('AgendaFiltros', [], [false, '/']);
+    }
+
+    public function print($request) {
+        if (empty($request['data']))
+            return response(['mensagem' => 'Necessário a data'], 401);
+
+        $agendas = Agenda::filter($request);
+        $blocos = [];
+        foreach ($agendas as $key => $agenda)
+            $blocos[$agenda['nome_bloco']][] = $agenda;
+
+        View::render('AgendaRelatorio', [
+            'blocos' => $blocos,
+            'data' => alterarData($request['data'], '+', 0, 'days', 'd/m/Y'),
+            'diaSemana' => diaSemana($request['data'])
+        ], [false, '/']);
     }
 }

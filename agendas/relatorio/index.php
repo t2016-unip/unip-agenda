@@ -6,12 +6,12 @@
     $controller = new AgendaController;
     if (METHOD == 'GET') {
         if (!ID)
-            $controller->datas();
+            $controller->filter();
         // else
         //     $controller->show(ID);
     }
     else if (METHOD == 'POST') {
-        $controller->report($_POST);
+        $controller->print($_POST);
     }
     // else if (METHOD == 'PUT') {
     //     $controller->update(ID, $_POST);

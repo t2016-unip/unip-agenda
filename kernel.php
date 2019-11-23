@@ -66,3 +66,7 @@
         if (!$date) $date = dateBr();
         return date($format, strtotime("{$date} {$operation} {$amount} {$type}"));
     }
+
+    function diaSemana($data) {
+        return ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'][date('w', strtotime($data))];
+    }

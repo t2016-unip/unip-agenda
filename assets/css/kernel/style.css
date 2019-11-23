@@ -273,3 +273,17 @@ textarea.form-field {
   color: white;
   margin-bottom: 15px;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex-center {
+  display: flex; 
+  justify-content: center;
+}
+
+.d-flex-between {
+  display: flex; 
+  justify-content: space-between;
+}
